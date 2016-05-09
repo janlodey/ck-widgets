@@ -1,0 +1,7 @@
+name: ck_widget
+type: module
+core: 8.x
+description: Add widget addons to the CK Editor
+package: Editor
+dependencies:
+  - ckeditor
