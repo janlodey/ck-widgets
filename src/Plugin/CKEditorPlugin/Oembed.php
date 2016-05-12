@@ -30,7 +30,8 @@ class Oembed extends CKEditorPluginBase {
   public function getButtons() {
     // Make sure that the path to the image matches the file structure of
     // the CKEditor plugin you are implementing.
-    $path = drupal_get_path('module', 'ck_widget') . '/js/plugins/oembed';
+    $path = libraries_get_path('oembed');
+
     return array(
       'oembed' => array(
         'label' => t('Oembed'),
@@ -45,7 +46,7 @@ class Oembed extends CKEditorPluginBase {
   public function getFile() {
     // Make sure that the path to the plugin.js matches the file structure of
     // the CKEditor plugin you are implementing.
-    return drupal_get_path('module', 'ck_widget') . '/js/plugins/oembed/plugin.js';
+    return libraries_get_path('oembed') . '/plugin.js';
   }
 
   /**

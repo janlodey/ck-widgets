@@ -30,7 +30,8 @@ class WidgetCommon extends CKEditorPluginBase {
   public function getButtons() {
     // Make sure that the path to the image matches the file structure of
     // the CKEditor plugin you are implementing.
-    $path = drupal_get_path('module', 'ck_widget') . '/js/plugins/widgetcommon';
+    //$path = drupal_get_path('module', 'ck_widget') . '/js/plugins/widgetcommon';
+    $path = libraries_get_path('widgetcommon');
     return array(
       'WidgetCommon' => array(
         'label' => t('Widget Common'),
@@ -45,7 +46,8 @@ class WidgetCommon extends CKEditorPluginBase {
   public function getFile() {
     // Make sure that the path to the plugin.js matches the file structure of
     // the CKEditor plugin you are implementing.
-    return drupal_get_path('module', 'ck_widget') . '/js/plugins/widgetcommon/plugin.js';
+    return libraries_get_path('widgetcommon') . '/plugin.js';
+
   }
 
   /**
@@ -53,20 +55,6 @@ class WidgetCommon extends CKEditorPluginBase {
    */
   public function isInternal() {
     return FALSE;
-  }
-
-  /**
-   * {@inheritdoc}
-   */
-  public function getDependencies(Editor $editor) {
-    return array();
-  }
-
-  /**
-   * {@inheritdoc}
-   */
-  public function getLibraries(Editor $editor) {
-    return array();
   }
 
   /**
