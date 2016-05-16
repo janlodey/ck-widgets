@@ -1,0 +1,5 @@
+<?php
+
+//function ck_widget_ckeditor_plugin_info_alter(array &$plugins){
+//  dsm($plugins);
+//}
